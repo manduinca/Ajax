@@ -1,0 +1,11 @@
+Un ridiculo ejemplo de LAMP
+
+Un pequeño ejemplo de una más pequeña web que hace consultas
+por ajax al servidor Apache. La respuesta se hace con php
+luego de escribir y leer de una base de datos mysql.
+
+Ambos archivos (index.html y datos.php) deben estar ubicados 
+en la carpeta configurada para arrancar de Apache. Por defecto
+en linux (Ubuntu) es /var/www/html/
+
+

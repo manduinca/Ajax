@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Formulario con Ajax Jquery </title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script>
+            $(function() {
+                $("#btn").click(function() {
+                    $.ajax({
+                        type: "GET",
+                        url: "datos.php",
+                        data: $("#form").serialize(),
+                        success: function(data) {
+                                    $("#id").html(data);
+                                 },
+                        error: function(x,s,e) {
+                                    console.log(e);
+                               }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <form id="form">
+            Nombre:<br>
+            <input type="text" name="nombre"> </input><br>
+            Email:<br>
+            <input type="text" name="email"> </input><br>
+            <input type="button" value="Enviar" id="btn"> </input>
+        </form>
+        <h4>respuesta:</h4><br>
+        <div id="id">
+        </div>
+    </body>
+
+</html>
